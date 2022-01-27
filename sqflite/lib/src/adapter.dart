@@ -1,12 +1,12 @@
 // Copyright (c) 2016, teja. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
-library jaguar_query_sqflite.src;
+library jaguar_query_sqflite_nullsafety.src;
 
 import 'dart:async';
 
 import 'package:jaguar_query/jaguar_query.dart';
-import 'package:jaguar_query_sqflite/composer.dart';
+import 'package:jaguar_query_sqflite_nullsafety/composer.dart';
 import 'package:sqflite/sqflite.dart' as sqf;
 
 class SqfliteAdapter implements Adapter<sqf.Database> {

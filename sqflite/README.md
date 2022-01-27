@@ -1,4 +1,4 @@
-# jaguar_query_sqflite
+# jaguar_query_sqflite_nullsafety
 
 [`sqflite`](https://pub.dartlang.org/packages/sqflite) adapter for `jaguar_query`
 and `jaguar_orm`.
@@ -11,7 +11,7 @@ A simple usage example:
 import 'dart:io';
 import 'dart:async';
 import 'package:sqflite/sqflite.dart';
-import 'package:jaguar_query_sqflite/jaguar_query_sqflite.dart';
+import 'package:jaguar_query_sqflite/jaguar_query_sqflite_nullsafety.dart';
 
 // The model
 class Post {

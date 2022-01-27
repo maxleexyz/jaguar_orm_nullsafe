@@ -16,7 +16,7 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  jaguar_query_sqflite:
+  jaguar_query_sqflite_nullsafety:
     path: ../
 
 dev_dependencies:

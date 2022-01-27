@@ -3,7 +3,7 @@
 
 import 'dart:async';
 
-import 'package:jaguar_query_sqflite/jaguar_query_sqflite.dart';
+import 'package:jaguar_query_sqflite_nullsafety/jaguar_query_sqflite_nullsafety.dart';
 import 'package:sqflite/sqflite.dart';
 
 /// The adapter

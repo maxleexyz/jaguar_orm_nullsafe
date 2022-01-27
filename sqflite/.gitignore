@@ -21,5 +21,4 @@ doc/api/
 *.iml
 *.ipr
 *.iws
-/.flutter-plugins
 .fvm/flutter_sdk
