@@ -8,4 +8,4 @@
 library jaguar_query_sqflite_nullsafety;
 
 export 'src/adapter.dart';
-export 'package:jaguar_query/jaguar_query.dart';
+export 'package:jaguar_query_nullsafety/jaguar_query_nullsafety.dart';

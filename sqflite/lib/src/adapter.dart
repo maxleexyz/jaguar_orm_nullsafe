@@ -5,7 +5,7 @@ library jaguar_query_sqflite_nullsafety.src;
 
 import 'dart:async';
 
-import 'package:jaguar_query/jaguar_query.dart';
+import 'package:jaguar_query_nullsafety/jaguar_query_nullsafety.dart';
 import 'package:jaguar_query_sqflite_nullsafety/composer.dart';
 import 'package:sqflite/sqflite.dart' as sqf;
 

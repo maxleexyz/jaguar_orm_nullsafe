@@ -1,6 +1,6 @@
 library query.compose;
 
-import 'package:jaguar_query/jaguar_query.dart';
+import 'package:jaguar_query_nullsafety/jaguar_query_nullsafety.dart';
 
 part 'create.dart';
 part 'alter.dart';
