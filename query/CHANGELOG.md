@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.0
+
++ support null-safety
+
 ## 2.2.9
 
 + Add insert or ignore capabilities

@@ -1,8 +1,8 @@
-library jaguary_query.operators;
+library jaguar_query_nullsafety.operators;
 
 import 'dart:core';
 import 'dart:core' as core;
-import 'package:jaguar_query/src/core/core.dart';
+import 'package:jaguar_query_nullsafety/src/core/core.dart';
 
 part 'int.dart';
 part 'string.dart';

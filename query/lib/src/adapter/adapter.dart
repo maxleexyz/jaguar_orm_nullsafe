@@ -2,7 +2,7 @@ library jaguar_orm.adapter;
 
 import 'dart:async';
 
-import 'package:jaguar_query/jaguar_query.dart';
+import 'package:jaguar_query_nullsafety/jaguar_query_nullsafety.dart';
 
 /// Adapter interface that must be implemented to support new databases
 abstract class Adapter<ConnType> {

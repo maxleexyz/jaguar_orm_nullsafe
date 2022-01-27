@@ -8,8 +8,8 @@ import 'dart:collection';
 import 'dart:core';
 import 'dart:core' as core;
 
-import 'package:jaguar_query/src/adapter/adapter.dart';
-import 'package:jaguar_query/src/operators/operators.dart' as q;
+import 'package:jaguar_query_nullsafety/src/adapter/adapter.dart';
+import 'package:jaguar_query_nullsafety/src/operators/operators.dart' as q;
 
 part 'expression/and.dart';
 part 'expression/condition.dart';

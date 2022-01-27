@@ -1,8 +1,8 @@
-library jaguar_query.bean;
+library jaguar_query_nullsafety.bean;
 
 import 'dart:async';
 
-import 'package:jaguar_query/jaguar_query.dart';
+import 'package:jaguar_query_nullsafety/jaguar_query_nullsafety.dart';
 
 typedef Expression ExpressionMaker<MT>(Bean<MT> bean);
 

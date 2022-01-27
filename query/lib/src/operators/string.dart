@@ -1,4 +1,4 @@
-part of jaguary_query.operators;
+part of jaguar_query_nullsafety.operators;
 
 /// DSL to create 'is equal to' relational condition
 Cond<String> eqStr(String field, String rhs, {String? tableName}) =>
