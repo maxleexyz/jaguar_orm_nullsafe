@@ -1,9 +1,7 @@
-import 'package:source_gen/source_gen.dart';
-import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/dart/element/element.dart';
-
-import 'package:jaguar_query/jaguar_query.dart';
+import 'package:analyzer/dart/element/type.dart';
 import 'package:jaguar_orm/jaguar_orm.dart';
+import 'package:source_gen/source_gen.dart';
 
 final isGenBean = new TypeChecker.fromRuntime(GenBean);
 

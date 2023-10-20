@@ -1,0 +1,66 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "generator",
+            "cwd": "generator",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "orm",
+            "cwd": "orm",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "query",
+            "cwd": "query",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "sqflite",
+            "cwd": "sqflite",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "sqflite (profile mode)",
+            "cwd": "sqflite",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "sqflite (release mode)",
+            "cwd": "sqflite",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "example",
+            "cwd": "sqflite/example",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "example (profile mode)",
+            "cwd": "sqflite/example",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "example (release mode)",
+            "cwd": "sqflite/example",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

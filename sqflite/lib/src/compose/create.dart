@@ -77,8 +77,7 @@ String composeCreate(final Create create) {
 
   final List<CreateColumn> primaries = info.columns.values
       .where((CreateColumn col) =>
-          col.isPrimary &&
-          (col is! CreateInt || !(col as CreateInt).autoIncrement))
+          col.isPrimary && (col is! CreateInt || !col.autoIncrement))
       .toList();
   if (primaries.length != 0) {
     sb.write(', PRIMARY KEY (');

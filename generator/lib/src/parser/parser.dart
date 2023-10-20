@@ -67,7 +67,7 @@ class ParsedBean {
 
   final beanedForeignAssociations = <DartType, BeanedForeignAssociation>{};
 
-  ParsedBean(this.clazz, {this.doRelations: true, this.doAssociation: true});
+  ParsedBean(this.clazz, {this.doRelations = true, this.doAssociation = true});
 
   WriterModel detect() {
     _getModel();
@@ -256,7 +256,7 @@ class ParsedBean {
 
     model = interface.typeArguments.first;
 
-    if (model.isDynamic) {
+    if (model is DynamicType) {
       throw Exception("Don't support Model of type dynamic!");
     }
   }
@@ -404,7 +404,7 @@ class ParsedBean {
                   .detect();
           g = info.belongTos.values.toList().firstWhereOrNull((bts) =>
               bts.beanName == curBean.getDisplayString(withNullability: false));
-          if (g == null || g is! BelongsToAssociation)
+          if (g == null)
             throw Exception('Association $bean not found! Field ${f.name}.');
         }
       }
@@ -431,7 +431,7 @@ class ParsedBean {
             ParsedBean(pivot.element as ClassElement, doRelations: false)
                 .detect();
         g = beanInfo.belongTos[curBean];
-        if (g == null || g is! BelongsToAssociation) {
+        if (g == null) {
           throw Exception('Association $curBean not found! Field ${f.name}.');
         }
         final WriterModel targetInfo =

@@ -11,7 +11,7 @@ class BelongsToForeign implements Foreign {
 
   final DartType model;
 
-  final bool byHasMany;
+  final bool? byHasMany;
 
   final bool belongsToMany;
 

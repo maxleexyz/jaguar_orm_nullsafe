@@ -7,19 +7,22 @@ import 'package:jaguar_query_sqflite_nullsafety/jaguar_query_sqflite_nullsafety.
 import 'package:sqflite/sqflite.dart';
 
 /// The adapter
-SqfliteAdapter _adapter;
+late SqfliteAdapter _adapter;
 
 // The model
 class Post {
-  Post();
-
   Post.make(this.id, this.msg, this.author);
 
-  int id;
+  int? id;
 
-  String msg;
+  String? msg;
 
-  String author;
+  String? author;
+  Post({
+    this.id,
+    this.msg,
+    this.author,
+  });
 
   String toString() => '$id $msg $author';
 }
@@ -74,12 +77,12 @@ class PostBean {
 
     updater.where(this.id.eq(id));
 
-    Map map = await _adapter.findOne(updater);
+    Map<String, dynamic>? map = await _adapter.findOne(updater);
 
-    Post post = new Post();
-    post.id = map['_id'];
-    post.msg = map['msg'];
-    post.author = map['author'];
+    Post post = Post();
+    post.id = map?['_id'];
+    post.msg = map?['msg'];
+    post.author = map?['author'];
 
     return post;
   }
@@ -90,7 +93,7 @@ class PostBean {
 
     List<Map> maps = await (await _adapter.find(finder)).toList();
 
-    List<Post> posts = new List<Post>();
+    List<Post> posts = <Post>[];
 
     for (Map map in maps) {
       Post post = new Post();
