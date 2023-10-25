@@ -18,9 +18,9 @@ dependencies:
       path: orm
   analyzer:
   build: ^2.4.1
-  logging: ^1.0.1
-  source_gen: ^1.0.0
-  meta: ^1.7.0
+  logging: ^1.2.0
+  source_gen: ^1.4.0
+  meta: ^1.11.0
 
 dev_dependencies:
   test: ^1.17.10
