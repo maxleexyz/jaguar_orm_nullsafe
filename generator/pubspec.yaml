@@ -20,7 +20,7 @@ dependencies:
   build: ^2.4.1
   logging: ^1.2.0
   source_gen: ^1.4.0
-  meta: ^1.11.0
+  meta: ^1.9.1
 
 dev_dependencies:
   test: ^1.17.10
