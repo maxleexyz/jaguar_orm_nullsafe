@@ -13,7 +13,10 @@ dependencies:
   flutter:
     sdk: flutter
   sqflite: ^2.0.0+3
-  jaguar_query_nullsafety: ^2.3.0
+  jaguar_query_nullsafety:
+    git:
+      url: https://github.com/maxleexyz/jaguar_orm_nullsafe.git
+      path: query
 
 dev_dependencies:
   flutter_test:
