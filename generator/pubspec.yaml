@@ -1,30 +1,28 @@
 name: jaguar_orm_gen
-description: Generator for jaguar_orm
-version: 2.2.30
-homepage: https://github.com/Jaguar-dart/jaguar_orm
-publish_to: none
+description: Generator for jaguar_orm_nullsafe
+version: 3.0.0
 
 environment:
-  sdk: '>=3.1.4 <4.0.0'
+  sdk: '>=3.2.0 <4.0.0'
 
 dependencies:
-  jaguar_query_nullsafety: # ^2.2.9
+  jaguar_query_nullsafety: 
     git:
       url: https://github.com/maxleexyz/jaguar_orm_nullsafe.git
       path: query
-  jaguar_orm: # ^2.2.7
+  jaguar_orm_nullsafety:
     git:
       url: https://github.com/maxleexyz/jaguar_orm_nullsafe.git
       path: orm
-  analyzer:
+  analyzer: ^6.7.0
   build: ^2.4.1
   logging: ^1.2.0
-  source_gen: ^1.4.0
-  meta: ^1.9.1
+  source_gen: ^1.5.0
+  meta: ^1.15.0
 
 dev_dependencies:
-  test: ^1.17.10
-  build_runner: ^2.4.6
-  build_test: ^2.2.1
-  collection: ^1.18.0
-  path: ^1.8.3
+  test: ^1.25.7
+  build_runner: ^2.4.11
+  build_test: ^2.2.2
+  collection: ^1.15.0
+  path: ^1.9.0

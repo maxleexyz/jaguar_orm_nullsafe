@@ -1,20 +1,18 @@
-name: jaguar_orm
+name: jaguar_orm_nullsafety
 description: Source-generated ORM with relations (one-to-one, one-to-many, many-to-many), preloading, cascading, polymorphic relations, etc
-version: 2.2.7
-homepage: https://github.com/Jaguar-dart/jaguar_orm
-publish_to: none
+version: 3.0.0
 
 environment:
-  sdk: '>=3.1.4 <4.0.0'
+  sdk: '>=3.2.0 <4.0.0'
 
 dependencies:
-  jaguar_query: # ^2.2.9
+  jaguar_query_nullsafety:
     git:
-      url: https://github.com/isaacfi/jaguar_orm_nullsafe.git
+      url: https://github.com/maxleexyz/jaguar_orm_nullsafe.git
       path: query
   quiver: ^3.0.1
   path: ^1.8.0
-  meta: ^1.9.1
+  meta: ^1.15.0
 
 dev_dependencies:
   test: ^1.17.10
