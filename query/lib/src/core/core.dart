@@ -3,6 +3,7 @@
 
 library query;
 
+import 'dart:async';
 import 'dart:collection';
 import 'dart:core';
 import 'dart:core' as core;
@@ -24,14 +25,14 @@ part 'statement/create/create.dart';
 part 'statement/create_db.dart';
 part 'statement/drop.dart';
 part 'statement/find/find.dart';
+part 'statement/upsert.dart';
+part 'statement/upsert_many.dart';
 part 'statement/insert.dart';
 part 'statement/insert_many.dart';
 part 'statement/remove.dart';
 part 'statement/statements.dart';
 part 'statement/update.dart';
 part 'statement/update_many.dart';
-part 'statement/upsert.dart';
-part 'statement/upsert_many.dart';
 part 'table/table.dart';
 
 /// Main DSL class to create SQL statements

@@ -39,9 +39,9 @@ class JoinType {
 }
 
 class JoinedTable implements Table {
-  final JoinType? _type;
+  final JoinType _type;
 
-  final TableName? _to;
+  final TableName _to;
 
   final _on = And();
 
@@ -97,9 +97,9 @@ class QueryJoinedTableInfo {
 
   QueryJoinedTableInfo(this._inner);
 
-  JoinType? get type => _inner._type;
+  JoinType get type => _inner._type;
 
-  TableName? get to => _inner._to;
+  TableName get to => _inner._to;
 
   // TODO immutable
   And get on => _inner._on;

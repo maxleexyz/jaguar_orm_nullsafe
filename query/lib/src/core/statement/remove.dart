@@ -21,7 +21,7 @@ class Remove implements Statement, Whereable {
 
   Remove orMap<T>(Iterable<T> iterable, MappedExpression<T> func) {
     iterable.forEach((T v) {
-      final Expression exp = func(v);
+      final Expression? exp = func(v);
       if (exp != null) _where = _where.or(exp);
     });
     return this;
@@ -29,7 +29,7 @@ class Remove implements Statement, Whereable {
 
   Remove andMap<T>(Iterable<T> iterable, MappedExpression<T> func) {
     iterable.forEach((T v) {
-      final Expression exp = func(v);
+      final Expression? exp = func(v);
       if (exp != null) _where = _where.and(exp);
     });
     return this;

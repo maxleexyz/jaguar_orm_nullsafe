@@ -129,16 +129,16 @@ class Find implements Statement, Whereable {
 
   Find orMap<T>(Iterable<T> iterable, MappedExpression<T> func) {
     iterable.forEach((T v) {
-      final Expression exp = func(v);
-      _where = _where.or(exp);
+      final Expression? exp = func(v);
+      if (exp != null) _where = _where.or(exp);
     });
     return this;
   }
 
   Find andMap<T>(Iterable<T> iterable, MappedExpression<T> func) {
     iterable.forEach((T v) {
-      final Expression exp = func(v);
-      _where = _where.and(exp);
+      final Expression? exp = func(v);
+      if (exp != null) _where = _where.and(exp);
     });
     return this;
   }
@@ -245,7 +245,7 @@ class ImmutableFindStatement {
   int? get offset => _find._offset;
 }
 
-typedef MappedExpression<T> = Expression Function(T value);
+typedef MappedExpression<T> = Expression? Function(T value);
 
 class OrderBy {
   final String columnName;
