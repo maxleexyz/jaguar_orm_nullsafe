@@ -6,7 +6,7 @@ import 'package:analyzer/dart/element/element.dart';
 import 'package:build/src/builder/build_step.dart';
 import 'package:source_gen/source_gen.dart';
 
-import 'package:jaguar_orm/src/annotations/annotations.dart' as ant;
+import 'package:jaguar_orm_nullsafety/src/annotations/annotations.dart' as ant;
 
 import 'package:jaguar_orm_gen/src/parser/parser.dart';
 import 'package:jaguar_orm_gen/src/writer/writer.dart';

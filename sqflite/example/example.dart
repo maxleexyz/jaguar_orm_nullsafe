@@ -11,16 +11,11 @@ import 'package:sqflite/sqflite.dart';
 class Post {
   Post.make(this.id, this.msg, this.author);
 
-  int? id;
+  int id;
 
-  String? msg;
+  String msg;
 
-  String? author;
-  Post({
-    this.id,
-    this.msg,
-    this.author,
-  });
+  String author;
 
   String toString() => '$id $msg $author';
 }
@@ -80,10 +75,7 @@ class PostBean {
 
     Map<String, dynamic>? map = await _adapter.findOne(updater);
 
-    Post post = Post();
-    post.id = map?['_id'];
-    post.msg = map?['msg'];
-    post.author = map?['author'];
+    Post post = Post.make(map?['_id'], map?['msg'], map?['author']);
 
     return post;
   }
@@ -94,15 +86,10 @@ class PostBean {
 
     List<Map> maps = await (await _adapter.find(finder)).toList();
 
-    List<Post> posts = <Post>[];
+    List<Post> posts = [];
 
     for (Map map in maps) {
-      Post post = new Post();
-
-      post.id = map['_id'];
-      post.msg = map['msg'];
-      post.author = map['author'];
-
+      Post post = Post.make(map['_id'], map['msg'], map['author']);
       posts.add(post);
     }
 
