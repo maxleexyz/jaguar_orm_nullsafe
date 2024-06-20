@@ -1,6 +1,6 @@
 library jaguar_orm.annotation;
 
-export 'package:jaguar_query/jaguar_query.dart';
+export 'package:jaguar_query_nullsafety/jaguar_query_nullsafety.dart';
 
 part 'property.dart';
 part 'relations.dart';
