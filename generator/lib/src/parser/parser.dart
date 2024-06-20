@@ -256,7 +256,7 @@ class ParsedBean {
 
     model = interface.typeArguments.first;
 
-    if (model is DynamicType) {
+    if (model.isDynamic) {
       throw Exception("Don't support Model of type dynamic!");
     }
   }
@@ -404,7 +404,7 @@ class ParsedBean {
                   .detect();
           g = info.belongTos.values.toList().firstWhereOrNull((bts) =>
               bts.beanName == curBean.getDisplayString(withNullability: false));
-          if (g == null)
+          if (g == null || g is! BelongsToAssociation)
             throw Exception('Association $bean not found! Field ${f.name}.');
         }
       }
@@ -431,7 +431,7 @@ class ParsedBean {
             ParsedBean(pivot.element as ClassElement, doRelations: false)
                 .detect();
         g = beanInfo.belongTos[curBean];
-        if (g == null) {
+        if (g == null || g is! BelongsToAssociation) {
           throw Exception('Association $curBean not found! Field ${f.name}.');
         }
         final WriterModel targetInfo =
